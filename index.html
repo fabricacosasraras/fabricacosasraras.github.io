@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Image</title>
+    <style>
+        /* Remove default browser spacing */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f0f0; /* Optional: Change your background color here */
+        }
+
+        /* Create a fullscreen flexible container to handle centering */
+        .container {
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center;     /* Centers vertically */
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Ensure the image remains responsive and fits nicely on mobile devices */
+        img {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow */
+            border-radius: 8px;                     /* Optional: Rounds the corners slightly */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Replace the placeholder URL with your actual image file or link -->
+        <img src="logo.jpg" alt="Centered Image">
+    </div>
+
+</body>
+</html>
