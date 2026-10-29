@@ -1,44 +1,326 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es-CL">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fábrica Cosas Raras</title>
-    <style>
-        /* Remove default browser spacing */
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #f0f0f0; /* Optional: Change your background color here */
-        }
-
-        /* Create a fullscreen flexible container to handle centering */
-        .container {
-            display: flex;
-            justify-content: center; /* Centers horizontally */
-            align-items: center;     /* Centers vertically */
-            width: 100%;
-            height: 100%;
-        }
-
-        /* Ensure the image remains responsive and fits nicely on mobile devices */
-        img {
-            max-width: 90%;
-            max-height: 90vh;
-            object-fit: contain;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow */
-            border-radius: 8px;                     /* Optional: Rounds the corners slightly */
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fábrica Cosas Raras · Para empresas</title>
+  <meta name="description" content="Diseñamos y fabricamos instalaciones, mobiliario y landmarks con el residuo de tu propia empresa. Ves la pieza en 3D antes de producirla y la recibes con certificado de disposición final para la Ley REP.">
+  <meta property="og:title" content="Fábrica Cosas Raras · Para empresas">
+  <meta property="og:description" content="Lo que tu empresa paga por hacer desaparecer, convertido en algo que puede mostrar.">
+  <meta property="og:image" content="https://cosasraras.cl/assets/img/og-fcr.jpg">
+  <meta property="og:url" content="https://cosasraras.cl/">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1D1A2E">
+  <link rel="icon" type="image/svg+xml" href="assets/logos/fcr-avatar-vino.svg">
+  <link rel="preload" href="assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
-    <div class="container">
-        <!-- Replace the placeholder URL with your actual image file or link -->
-        <img src="logo.jpg" alt="Centered Image">
+<!-- 0 · BARRA FIJA -->
+<header class="bar">
+  <div class="wrap bar__in">
+    <a href="#inicio" class="bar__logo" aria-label="Fábrica Cosas Raras, inicio">
+      <img src="assets/logos/fcr-horizontal-vino.svg" alt="Fábrica Cosas Raras · Para empresas" width="158" height="103">
+    </a>
+    <nav class="bar__nav" aria-label="Secciones">
+      <a href="#caminos">Qué puede ser tu residuo</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#caso">Caso</a>
+    </nav>
+    <a href="#contacto" class="btn btn--amber btn--sm">Conversemos</a>
+  </div>
+</header>
+
+<main>
+
+<!-- 1 · PORTADA -->
+<section class="hero" id="inicio">
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      <p class="mono kicker">Instalaciones · Mobiliario · Landmarks</p>
+      <h1>Tu residuo, convertido en algo que <span class="hl">mostrar.</span></h1>
+      <p class="lead">Diseñamos y fabricamos instalaciones, mobiliario y landmarks con el residuo de tu propia empresa. Ves la pieza en 3D antes de producirla y la recibes con certificado de disposición final para la Ley REP.</p>
+      <div class="hero__cta">
+        <a href="#contacto" class="btn btn--amber">Quiero conversar</a>
+        <a href="#como-funciona" class="link">Ver cómo funciona</a>
+      </div>
+    </div>
+    <figure class="hero__photo">
+      <img src="assets/img/hero-obra-mujer-mirando.jpg" alt="Una visitante mira hacia arriba las flores de plástico revalorizado suspendidas sobre el pasillo de Sur Mujer 2026" width="1067" height="1600" fetchpriority="high">
+      <figcaption class="mono">FCR-001 · Sur Mujer 2026 · Valdivia</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 2 · FRANJA DE PRUEBA -->
+<section class="proof dark" aria-labelledby="proof-title">
+  <div class="wrap proof__grid">
+    <figure class="proof__photo">
+      <img src="assets/img/origen-cajas.jpg" alt="Cajas agrícolas plásticas en desuso, apiladas antes de ser trituradas" width="1080" height="1600" loading="lazy">
+      <figcaption class="mono">Origen · cajas agrícolas PP5</figcaption>
+    </figure>
+    <div class="proof__text">
+      <p class="mono kicker kicker--amber">Lo que puedes reportar</p>
+      <h2 id="proof-title">Antes fueron 300 cajas de fruta.</h2>
+      <dl class="stats">
+        <div><dt class="mono">Revalorizados</dt><dd>78 <span>kg</span></dd></div>
+        <div><dt class="mono">Flores</dt><dd>60</dd></div>
+        <div><dt class="mono">Pétalos</dt><dd>300</dd></div>
+        <div><dt class="mono">Intervenidos</dt><dd>25 <span>m²</span></dd></div>
+      </dl>
+      <p class="note">Kilos que dejan de ir a relleno y quedan a la vista, en un dato que tu empresa puede reportar. Datos de FCR-001, Sur Mujer 2026.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · QUÉ PUEDE SER TU RESIDUO -->
+<section class="section" id="caminos" aria-labelledby="caminos-title">
+  <div class="wrap">
+    <header class="section__head">
+      <p class="mono kicker">01 · Qué puede ser tu residuo</p>
+      <h2 id="caminos-title">El mismo residuo, tres caminos según lo que tu empresa necesita</h2>
+      <p class="section__intro">Trabajamos con distintos materiales. Según lo que tu empresa necesita, el mismo residuo puede tomar tres caminos.</p>
+    </header>
+
+    <div class="paths">
+      <article class="path">
+        <figure class="path__img">
+          <img src="assets/img/camino-experiencia-marca.jpg" alt="Dos personas se sacan una selfie sentadas frente a una instalación de círculos tejidos" width="1280" height="1600" loading="lazy">
+        </figure>
+        <p class="mono path__tag">Experiencia de marca</p>
+        <h3>Un lugar donde la gente se saca la foto con tu marca</h3>
+        <p>Photo-opportunities, landmarks y piezas de marca para tu espacio, ingreso o evento. Cada foto que se comparte lleva tu marca y cuenta de dónde viene el material.</p>
+      </article>
+
+      <article class="path">
+        <figure class="path__img">
+          <img src="assets/img/camino-evento-flores.jpg" alt="Flores PP5 suspendidas en lila y verde, hechas con cajas agrícolas revalorizadas" width="1067" height="1600" loading="lazy">
+          <figcaption class="mono path__cap">Flores PP5 · Sur Mujer 2026</figcaption>
+        </figure>
+        <p class="mono path__tag">Evento</p>
+        <h3>Una instalación que la gente recuerda</h3>
+        <p>Instalaciones y escenografías para ferias, festivales, centros de eventos y oficinas. Se venden, o se arriendan por un periodo para partir.</p>
+      </article>
+
+      <article class="path">
+        <figure class="path__img">
+          <img src="assets/img/render-flor.jpg" alt="Render de FLOR, mobiliario escultórico con forma de flor en una plaza, con niños jugando sobre él" width="1600" height="787" loading="lazy" style="object-position: 58% 50%">
+          <figcaption class="mono path__cap">Render · FLOR mobiliario</figcaption>
+        </figure>
+        <p class="mono path__tag">Comunidad</p>
+        <h3>Una pieza para la comunidad donde operas</h3>
+        <p>Mobiliario, murales y objetos para plazas, escuelas y espacios públicos, diseñados y hechos para la comunidad de tu región.</p>
+      </article>
     </div>
 
+    <div class="manifest">
+      <p class="manifest__big">Pensamos como estudio y producimos como fábrica.</p>
+      <p>El reciclaje devuelve el material a un ciclo industrial donde desaparece. Nosotras lo revalorizamos: el residuo vuelve a tu empresa convertido en una pieza única que se ve, se toca y cuenta su historia.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · VIDEO DE PROCESO -->
+<section class="section dark" id="proceso" aria-labelledby="proceso-title">
+  <div class="wrap media">
+    <div class="media__text">
+      <div>
+      <p class="mono kicker kicker--amber">02 · Taller · Valdivia</p>
+      <h2 id="proceso-title">Del residuo a la pieza</h2>
+      <p>Cada material se trabaja distinto, pero el proceso tiene siempre tres pasos. En el video, cómo lo hicimos en Sur Mujer 2026.</p>
+      </div>
+      <ol class="steps-mini">
+        <li><span class="mono">01</span><span><strong>Recolección del material.</strong> El residuo sale de tu empresa y llega a nuestro taller.</span></li>
+        <li><span class="mono">02</span><span><strong>Procesado del material.</strong> Lo preparamos según su tipo para poder trabajarlo.</span></li>
+        <li><span class="mono">03</span><span><strong>Manufactura.</strong> Diseñamos y fabricamos la pieza en nuestro taller.</span></li>
+      </ol>
+    </div>
+    <div class="video">
+      <video controls playsinline preload="none" width="1920" height="1080" poster="assets/img/poster-proceso.jpg" aria-label="Video del proceso de Sur Mujer, 1 minuto 3 segundos">
+        <source src="assets/video/Proceso-Surmujer.mp4" type="video/mp4">
+      </video>
+      <button class="video__play" type="button" aria-label="Reproducir video de proceso"><span class="mono">▶ Ver proceso · 1:03</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · CÓMO FUNCIONA -->
+<section class="section" id="como-funciona" aria-labelledby="como-title">
+  <div class="wrap">
+    <header class="section__head">
+      <p class="mono kicker">03 · Cómo funciona</p>
+      <h2 id="como-title">Ves la pieza antes de que exista</h2>
+    </header>
+
+    <ol class="steps">
+      <li><span class="mono num">01</span><h3>Diagnóstico</h3><p>Visitamos tu planta. Vemos tipo de material, volumen y frecuencia de la merma.</p></li>
+      <li><span class="mono num">02</span><h3>Caminos</h3><p>Te proponemos dos o tres piezas según tu objetivo: reputación, evento o comunidad.</p></li>
+      <li><span class="mono num">03</span><h3>Prototipo</h3><p>La pieza en 3D, en su lugar y a escala, antes de fabricar.</p></li>
+      <li><span class="mono num">04</span><h3>Producción</h3><p>Fabricamos en nuestro taller en Valdivia e instalamos.</p></li>
+      <li><span class="mono num">05</span><h3>Certificado</h3><p>Certificado de disposición final con gestor autorizado, para tu reporte de Ley REP.</p></li>
+    </ol>
+
+    <div class="faq">
+      <p class="mono kicker">Lo que te van a preguntar en tu empresa</p>
+      <dl class="faq__grid">
+        <div><dt>¿Cómo lo reporto?</dt><dd>Coordinamos el certificado de disposición final con un gestor autorizado, para tu reporte de Ley REP.</dd></div>
+        <div><dt>¿Se puede rastrear?</dt><dd>Registramos el residuo desde que sale de tu planta hasta la pieza terminada.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · CASO + TESTIMONIO -->
+<section class="section section--panel" id="caso" aria-labelledby="caso-title">
+  <div class="wrap">
+    <figure class="case__photo">
+      <img src="assets/img/caso-surmujer-pasillo.jpg" alt="Pasillo de la feria Sur Mujer con flores de plástico revalorizado suspendidas sobre los visitantes" width="1600" height="1067" loading="lazy">
+    </figure>
+
+    <div class="case">
+      <div class="case__text">
+        <p class="mono kicker">Caso · FCR-001 · Encuentro Sur Mujer 2026</p>
+        <h2 id="caso-title">Pausa y propósito en el caos</h2>
+        <p>Cajas agrícolas en desuso convertidas en un techo de flores sobre los pasillos de la feria, en Valdivia. Producida y montada por un equipo de artistas, creativos y fabricantes del sur.</p>
+
+        <dl class="tag" aria-label="Etiqueta de origen">
+          <div><dt class="tag__id">FCR-001</dt><dd>Pausa y propósito en el caos</dd></div>
+          <div><dt>Origen</dt><dd>Cajas agrícolas · PP5</dd></div>
+          <div><dt>Antes</dt><dd>300 cajas de fruta</dd></div>
+          <div><dt>Ahora</dt><dd>60 flores · 300 pétalos</dd></div>
+          <div><dt>Peso</dt><dd>78 kg revalorizados</dd></div>
+          <div><dt>Taller</dt><dd>Valdivia · 2026</dd></div>
+        </dl>
+      </div>
+
+      <div class="case__video">
+        <div class="video video--testimonio">
+          <video controls playsinline preload="none" width="1920" height="1080" poster="assets/img/poster-testimonio.jpg" aria-label="Testimonio de Bernardita Birkner, Directora Creativa de Sur Mujer, 1 minuto 8 segundos">
+            <source src="assets/video/Testimonio-Bernardita-Birkner.mp4" type="video/mp4">
+          </video>
+          <button class="video__play" type="button" aria-label="Reproducir testimonio"><span class="mono">▶ Ver testimonio · 1:08</span></button>
+        </div>
+        <p class="case__who"><strong>Bernardita Birkner</strong><br><span class="mono">Directora Creativa · Sur Mujer</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6b · ALIANZAS -->
+<!-- Sección oculta hasta cerrar los vínculos con los aliados. Para mostrarla, borrar el atributo hidden. -->
+<section class="allies" id="alianzas" aria-labelledby="alianzas-title" hidden>
+  <div class="wrap">
+    <div class="allies__head">
+      <div>
+        <p class="mono kicker">Alianzas</p>
+        <h2 id="alianzas-title">Trabajamos en red para reducir los residuos industriales</h2>
+      </div>
+      <p class="allies__text">Empresas e instituciones que nos proporcionan material, nos apoyan desde lo institucional o buscan junto a nosotras nuevas formas de disminuir los residuos de la industria.</p>
+    </div>
+    <!-- Logos: subir en assets/logos/alianzas/ (SVG o PNG con fondo transparente, idealmente en una sola tinta).
+         Se muestran en negro taller para que todos se lean parejo; reemplazar cada <span> por:
+         <img src="assets/logos/alianzas/rioverde.svg" alt="RioVerde"> -->
+    <ul class="allies__logos">
+      <li><span class="mono">[LOGO] RioVerde</span></li>
+      <li><span class="mono">[LOGO] Ecocitex</span></li>
+      <li><span class="mono">[LOGO] [PENDIENTE]</span></li>
+      <li><span class="mono">[LOGO] [PENDIENTE]</span></li>
+      <li><span class="mono">[LOGO] [PENDIENTE]</span></li>
+    </ul>
+    <div class="allies__cta">
+      <p>¿Tu empresa quiere sumarse?</p>
+      <a class="btn btn--dark" href="mailto:hola@cosasraras.cl?subject=Quiero%20ser%20parte%20de%20las%20alianzas%20FCR" target="_blank" rel="noopener">Quiero ser parte de las alianzas</a>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · FORMAS DE PARTIR -->
+<section class="section" id="partir" aria-labelledby="partir-title">
+  <div class="wrap">
+    <header class="section__head">
+      <p class="mono kicker">04 · Formas de partir</p>
+      <h2 id="partir-title">¿Cuál es tu caso?</h2>
+    </header>
+
+    <div class="routes">
+      <article class="route route--main">
+        <h3>Tengo merma</h3>
+        <p>Diseñamos una pieza propia con el residuo de tu empresa y te la entregamos con certificado.</p>
+        <a href="#contacto" class="btn btn--amber">Quiero conversar</a>
+      </article>
+      <article class="route">
+        <h3>No tengo merma</h3>
+        <p>Si tu empresa o institución no genera residuos pero quiere una pieza con sentido ambiental, trabajamos con material recolectado por nosotras.</p>
+        <a href="#contacto" class="link">Conversemos</a>
+      </article>
+      <article class="route">
+        <h3>Soy agencia o proyectista</h3>
+        <p>Vendemos o arrendamos instalaciones disponibles para eventos y ferias. Revisa la ficha técnica de FLOR PP5.</p>
+        <a href="assets/docs/FCR_Ficha_FlorPP5_2026-10_v1.pdf" class="link" target="_blank" rel="noopener">Ver ficha técnica (PDF)</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · QUIÉN SE HACE CARGO -->
+<section class="section section--panel" id="equipo" aria-labelledby="equipo-title">
+  <div class="wrap team">
+    <figure class="team__photo">
+      <img src="assets/img/equipo-fcr.jpg" alt="El equipo de FCR en su stand de Sur Mujer 2026, junto a una flor PP5" width="1067" height="1600" loading="lazy">
+    </figure>
+    <div class="team__text">
+      <p class="mono kicker">05 · Quién se hace cargo</p>
+      <h2 id="equipo-title">Un equipo de Valdivia detrás de tu proyecto</h2>
+      <p>Desde 2021 diseñamos marcas y espacios para pymes e industrias del sur. En 2026 nace FCR, porque nuestros clientes necesitaban una salida para sus residuos.</p>
+      <ul class="people">
+        <li><strong>Mila Poblete</strong><span class="mono">Directora creativa y fundadora</span></li>
+        <li><strong>Danae Figueroa</strong><span class="mono">Finanzas, administración y bienestar del equipo</span></li>
+        <li><strong>Benjamín Carriquiry</strong><span class="mono">Dirección técnica, producción e innovación</span></li>
+      </ul>
+      <p class="note">Producimos en nuestro taller en Valdivia, con una red de artistas y oficios del sur.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · CIERRE Y CONTACTO -->
+<section class="contact" id="contacto" aria-labelledby="contacto-title">
+  <div class="wrap contact__grid">
+    <div>
+      <h2 id="contacto-title">¿Qué cosa rara podríamos hacer con lo que tu empresa bota?</h2>
+      <p class="contact__lead">Para partir la conversación, nos sirve saber:</p>
+      <ol class="contact__q">
+        <li><span class="mono">01</span> Qué residuo tiene tu empresa.</li>
+        <li><span class="mono">02</span> Cuánto se genera, aproximadamente.</li>
+        <li><span class="mono">03</span> Dónde está tu planta u oficina.</li>
+      </ol>
+      <div class="contact__cta">
+        <a class="btn btn--amber" href="https://wa.me/56951453864?text=Hola%20FCR%2C%20quiero%20conversar%20sobre%20el%20residuo%20de%20mi%20empresa.%0A%0AResiduo%3A%20%0ACantidad%20aproximada%3A%20%0AUbicaci%C3%B3n%3A%20" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        <a class="btn btn--line" href="mailto:hola@cosasraras.cl?subject=Conversemos%20sobre%20nuestro%20residuo" target="_blank" rel="noopener">hola@cosasraras.cl</a>
+      </div>
+    </div>
+    <div class="contact__logo">
+      <img src="assets/logos/fcr-vertical-crudo.svg" alt="Fábrica Cosas Raras · Para empresas" width="300" height="332">
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <img src="assets/logos/fcr-alternativa-crudo.svg" alt="FCR · Para empresas" class="foot__logo" width="275" height="295">
+    <p class="foot__manifest">El material ya existe. Solo necesita a alguien que lo vea.</p>
+    <ul class="foot__contact mono">
+      <li><a href="mailto:hola@cosasraras.cl" target="_blank" rel="noopener">hola@cosasraras.cl</a></li>
+      <li><a href="https://wa.me/56951453864" target="_blank" rel="noopener">+56 9 5145 3864</a></li>
+      <li><a href="https://www.instagram.com/cosasraras.cl/" target="_blank" rel="noopener">@cosasraras.cl</a></li>
+      <li>Taller · Valdivia, Chile</li>
+    </ul>
+  </div>
+  <div class="wrap"><p class="foot__legal mono">FCR · Fábrica Cosas Raras · Diseños de propiedad de FCR, prohibida su reproducción sin autorización</p></div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
